@@ -1,6 +1,7 @@
 import { pageLoad, pageLoadFooter } from "./pageLoad";
 import { loadMenu } from './menu';
 import { loadHome } from './home';
+import { loadInfo } from './info';
 
 function createHTMLElement(type, id, classes, content) {
     const element = document.createElement(type);
@@ -19,16 +20,6 @@ function createHTMLElement(type, id, classes, content) {
 };
 
 const container = document.querySelector('#content')
-
-// function addNavListeners() {
-//     const homeBtn = document.querySelector('#home');
-//     const menuBtn = document.querySelector('#menu');
-//     const infoBtn = document.querySelector('#info');
-
-//     homeBtn.addEventListener('click', loadHomePage);
-//     menuBtn.addEventListener('click', loadMenuPage);
-//     // infoBtn.addEventListener('click', loadInfoPage);
-// };
 
 function renderPage() {
     pageLoad();
@@ -50,6 +41,13 @@ function loadMenuPage() {
     pageLoadFooter();
 }
 
+function loadInfoPage() {
+    container.innerHTML = '';
+    pageLoad();
+    loadInfo();
+    pageLoadFooter();
+}
+
 renderPage();
 
 
@@ -57,5 +55,5 @@ export { createHTMLElement,
     container,
     loadHomePage,
     loadMenuPage,
-    renderPage
+    loadInfoPage,
 }

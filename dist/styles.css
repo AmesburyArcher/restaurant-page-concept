@@ -9,21 +9,21 @@
 }
 
 :root {
-    --dark-grey: #5D5C61;
-    --grey: #7b7b7b;
+    --text-color: #5D5C61;
+    --backupBackground: #7b7b7b;
     --text-highlight: #7395AE;
-    --pastel-blue: #557A95;
-    --grey-brown: #B1A296;
+    --background-color: #557A95;
+    --border-color: #B1A296;
     --white: #EEEEEE;
 }
 
 body {
     background-image: url(../src/assets/papyrus.webp);
-    background-color: var(--grey);
+    background-color: var(--backupBackground);
 }
 
 #content {
-    color: var(--dark-grey);
+    color: var(--text-color);
     font-family: 'Dosis', sans-serif;
     height: 100vh;
     width: 100vw;
@@ -92,15 +92,15 @@ body {
     align-items: center;
     padding: 2rem 0 2rem 0;
     gap: 3rem;
-    background-color: var(--pastel-blue);
+    background-color: var(--background-color);
     color: var(--white);
-    border: var(--grey-brown) 1px solid;
+    border: var(--border-color) 1px solid;
     overflow: scroll;
 }
 
 .menu-list {
     padding-bottom: 0.5rem;
-    border-bottom: var(--dark-grey) 1px solid;
+    border-bottom: var(--text-color) 1px solid;
 }
 
 .menu-item {
@@ -118,6 +118,80 @@ body {
 
 .menu-item.menu-price {
     font-size: 18px;
+}
+
+#info-container {
+    height: calc(100vh - 200px);
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 0 2rem 0;
+    gap: 3rem;
+    background-color: var(--background-color);
+    color: var(--white);
+    border: var(--border-color) 1px solid;
+    overflow: scroll;
+}
+
+#info-container #info-title {
+    font-size: 28px;
+}
+
+#info-container .info-subtitle {
+    font-size: 20px;
+}
+
+#info-container #contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#info-container .input {
+    padding: 0.2rem;
+    color: var(--text-color);
+}
+
+#info-container input {
+    margin-bottom: 1rem;
+}
+
+#info-container textarea {
+    resize: none;
+    height: 200px;
+    width: 250px;
+    margin-bottom: 1rem;
+    overflow: scroll;
+}
+
+#info-container #submit-btn {
+    width: fit-content;
+    padding: 0.25rem 2rem;
+    align-self: center;
+    background-color: var(--white);
+    color: var(--text-color);
+    border: none;
+    border-radius: 3px;
+}
+
+#info-container #submit-btn:hover {
+    background-color: var(--backupBackground);
+    color: var(--white);
+    cursor: pointer;
+}
+
+#map-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#map-container .map-title {
+    font-size: 20px;
 }
 
 #footer {

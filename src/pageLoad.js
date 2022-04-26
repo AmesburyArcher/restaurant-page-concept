@@ -1,4 +1,4 @@
-import { createHTMLElement, container, loadHomePage, loadMenuPage, renderPage } from "./index";
+import { createHTMLElement, container, loadHomePage, loadMenuPage, loadInfoPage } from "./index";
 
 function pageLoad() {
     const header = createHTMLElement('div', 'header', null, null);
@@ -11,6 +11,7 @@ function pageLoad() {
 
     homeLink.addEventListener('click', loadHomePage);
     menuLink.addEventListener('click', loadMenuPage);
+    infoLink.addEventListener('click', loadInfoPage);
 
     directoryLinks.appendChild(homeLink);
     directoryLinks.appendChild(menuLink);
