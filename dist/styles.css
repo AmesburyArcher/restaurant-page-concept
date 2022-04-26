@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&family=Whisper&display=swap');
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+:root {
+    --dark-grey: #5D5C61;
+    --grey: #7b7b7b;
+    --washed-blue: #7395AE;
+    --pastel-blue: #557A95;
+    --grey-brown: #B1A296;
+}
+
+body {
+    background-image: url(../src/assets/papyrus.webp);
+    background-color: var(--grey);
+}
+
+#content {
+    color: var(--dark-grey);
+    font-family: 'Dosis', sans-serif;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.25fr 0.25fr 4.25fr 0.25fr
+}
+
+#header {
+    grid-row: 1 / 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header .title {
+    margin-top: 2rem;
+    font-size: 48px;
+}
+
+#header ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+}
+
+#header ul li {
+    font-size: 36px;
+    font-family: 'Whisper', cursive;
+}
+
+#footer {
+    grid-row: 4 / 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

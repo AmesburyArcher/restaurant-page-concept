@@ -3,7 +3,9 @@ import { pageLoad } from "./pageLoad";
 function createHTMLElement(type, id, classes, content) {
     const element = document.createElement(type);
     
-    if(id) element.id = id;
+    if(id) {
+        element.setAttribute('id', id);
+    }
     if(classes) {
         classes.forEach((myClass) => element.classList.add(myClass));
     };
