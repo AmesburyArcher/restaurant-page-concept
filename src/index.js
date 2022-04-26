@@ -1,4 +1,6 @@
-import { pageLoad } from "./pageLoad";
+import { pageLoad, pageLoadFooter } from "./pageLoad";
+import { loadMenu } from './menu';
+import { loadHome } from './home';
 
 function createHTMLElement(type, id, classes, content) {
     const element = document.createElement(type);
@@ -23,19 +25,37 @@ const container = document.querySelector('#content')
 //     const menuBtn = document.querySelector('#menu');
 //     const infoBtn = document.querySelector('#info');
 
-//     homeBtn.addEventListener('click', loadHome);
-//     menuBtn.addEventListener('click', loadMenu);
-//     infoBtn.addEventListener('click', loadInfo);
+//     homeBtn.addEventListener('click', loadHomePage);
+//     menuBtn.addEventListener('click', loadMenuPage);
+//     // infoBtn.addEventListener('click', loadInfoPage);
 // };
 
 function renderPage() {
-    // addNavListeners();
     pageLoad();
-    // loadHome();
+    loadHome();
+    pageLoadFooter();
 };
+
+function loadHomePage() {
+    container.innerHTML = '';
+    pageLoad();
+    loadHome();
+    pageLoadFooter();
+}
+
+function loadMenuPage() {
+    container.innerHTML = '';
+    pageLoad();
+    loadMenu();
+    pageLoadFooter();
+}
 
 renderPage();
 
+
 export { createHTMLElement, 
-    container
+    container,
+    loadHomePage,
+    loadMenuPage,
+    renderPage
 }

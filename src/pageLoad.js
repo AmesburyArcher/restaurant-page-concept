@@ -1,4 +1,4 @@
-import { createHTMLElement, container } from "./index";
+import { createHTMLElement, container, loadHomePage, loadMenuPage, renderPage } from "./index";
 
 function pageLoad() {
     const header = createHTMLElement('div', 'header', null, null);
@@ -9,16 +9,22 @@ function pageLoad() {
     const menuLink = createHTMLElement('li', null, ['directory-link'], 'Menu');
     const infoLink = createHTMLElement('li', null, ['directory-link'], 'Information');
 
+    homeLink.addEventListener('click', loadHomePage);
+    menuLink.addEventListener('click', loadMenuPage);
+
     directoryLinks.appendChild(homeLink);
     directoryLinks.appendChild(menuLink);
     directoryLinks.appendChild(infoLink);
     header.appendChild(title);
     header.appendChild(directoryLinks);
 
-    const footer = createHTMLElement('div', 'footer', null, "Created by AmesburyArcher 2022");
-
     container.appendChild(header);
-    container.appendChild(footer);
 }
 
-export { pageLoad };
+function pageLoadFooter() {
+    const footer = createHTMLElement('div', 'footer', null, "Created by AmesburyArcher 2022");
+    container.appendChild(footer);
+
+}
+
+export { pageLoad, pageLoadFooter };
