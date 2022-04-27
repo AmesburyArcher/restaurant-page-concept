@@ -13,7 +13,22 @@ function loadMenu() {
         {
             name: 'Pizza',
             description: 'This is the best pizza you\'ll ever eat',
-            price: '19.99'
+            price: '$19.99'
+        },
+        {
+            name: 'Steak',
+            description: 'This is the best steak you\'ll ever eat',
+            price: '$29.99'
+        },
+        {
+            name: 'Grilled Chicken',
+            description: 'This is the best grilled chicken you\'ll ever eat',
+            price: '$24.99'
+        },
+        {
+            name: 'Gelato',
+            description: 'This is the best gelato you\'ll ever eat',
+            price: '$7.99'
         },
         
     ]
